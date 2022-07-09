@@ -1,10 +1,11 @@
-import 'package:first_app/home/food_page_body.dart';
 import 'package:first_app/utils/colors.dart';
 import 'package:first_app/utils/dimensions.dart';
 import 'package:first_app/widgets/big_text.dart';
 import 'package:first_app/widgets/small_text.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
+import 'food_page_body.dart';
 
 class MainFoodPage extends StatefulWidget {
   MainFoodPage({Key? key}) : super(key: key);
