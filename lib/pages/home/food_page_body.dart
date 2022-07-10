@@ -1,6 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:first_app/utils/colors.dart';
 import 'package:first_app/utils/dimensions.dart';
+import 'package:first_app/widgets/app_column.dart';
 import 'package:first_app/widgets/big_text.dart';
 import 'package:first_app/widgets/icon_and_text_widgets.dart';
 import 'package:first_app/widgets/small_text.dart';
@@ -253,55 +254,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                     top: Dimensions.height10,
                     left: Dimensions.width15,
                     right: Dimensions.width15),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    BigText(text: "India Food"),
-                    SizedBox(
-                      height: Dimensions.height10,
-                    ),
-                    Row(
-                      children: [
-                        Wrap(
-                          children: List.generate(
-                              5,
-                              (index) => Icon(
-                                    Icons.star,
-                                    color: AppColors.mainColor,
-                                    size: Dimensions.height15,
-                                  )),
-                        ),
-                        SizedBox(width: Dimensions.width10),
-                        SmallText(text: "4.5"),
-                        SizedBox(width: Dimensions.width10),
-                        SmallText(text: "1290"),
-                        SizedBox(width: Dimensions.width5),
-                        SmallText(text: "Comments")
-                      ],
-                    ),
-                    SizedBox(height: Dimensions.height20),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        IconAndTextWidget(
-                          icon: Icons.circle_sharp,
-                          text: "Normal",
-                          iconColor: AppColors.iconColor1,
-                        ),
-                        IconAndTextWidget(
-                          icon: Icons.location_on,
-                          text: "1.7km",
-                          iconColor: AppColors.mainColor,
-                        ),
-                        IconAndTextWidget(
-                          icon: Icons.access_time_rounded,
-                          text: "32min",
-                          iconColor: AppColors.iconColor2,
-                        ),
-                      ],
-                    )
-                  ],
-                ),
+                child: AppColumn(text: "Chinese Food"),
               ),
             ),
           )
